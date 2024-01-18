@@ -17,7 +17,6 @@ void execute(char **argv)
 	FILE *fp;
 	unsigned int line = 1;
 	stack_t *top = NULL;
-	int number;
 
 	fp = fopen(argv[1], "r");
 	if (fp == NULL)
@@ -35,8 +34,7 @@ void execute(char **argv)
 			token = strtok(NULL, "\t\n ");
 			if (token == NULL || is_number(token) == -1)
 				not_int_error(line);
-			number = atoi(token);
-			global_number = number;
+			global_number = atoi(token);
 			function = op_code(cmd, line);
 			function(&top, line);
 		}
@@ -76,7 +74,7 @@ int is_number(char *token)
 /**
  * is_comment - check if the string is a comment
  * @token: pointer to string
- * @line counter: line
+ * @line_counter: line
  *
  * Return: -1 if not comment, 1 if it is
  */
