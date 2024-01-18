@@ -81,3 +81,21 @@ void free_nodes(stack_t *top)
 	free(top);
 }
 
+/**
+ * pint_nodes - print all nodes of the stack
+ * @top: pointer to the top of the stack
+ * @line_number: the line number
+ *
+ * Return: void
+ */
+
+void pint_nodes(stack_t **top, unsigned int line_number)
+{
+	stack_t *listptr = *top;
+	(void)line_number;
+
+	if (listptr != NULL)
+		printf("%d\n", listptr->n);
+	else
+		pint_error(line_number);
+}

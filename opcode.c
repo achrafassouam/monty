@@ -12,6 +12,7 @@ void (*op_code(char *token, unsigned int line))(stack_t **, unsigned int)
 	instruction_t operations[] = {
 		{"push", push_nodes},
 		{"pall", pall_nodes},
+		{"pint", pint_nodes},
 		{NULL, NULL}
 	};
 	int i;
