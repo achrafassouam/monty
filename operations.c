@@ -99,3 +99,23 @@ void pint_nodes(stack_t **top, unsigned int line_number)
 	else
 		pint_error(line_number);
 }
+
+/**
+ * pop_nodes - removes the top element of the stack
+ * @top: pointer to the top of the stack
+ * @line_number: the line number
+ *
+ * Return: void
+ */
+void pop_nodes(stack_t **top, unsigned int line_number)
+{
+	stack_t *listptr = *top;
+	(void) line_number;
+
+	if (*top == NULL)
+		pop_error(line_number);
+
+	listptr = listptr->next;
+	free(*top);
+	*top = listptr;
+}
