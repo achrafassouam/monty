@@ -21,3 +21,14 @@ void pop_error(unsigned int line)
 	fprintf(stderr, "L%u: can't pop an empty stack\n", line);
 	exit(EXIT_FAILURE);
 }
+
+/**
+ * swap_error - print err msg if stack contains less than two elements
+ * @line: line
+ * Return: void
+ */
+void swap_error(unsigned int line)
+{
+	fprintf(stderr, "L%u: can't swap, stack too short\n", line);
+	exit(EXIT_FAILURE);
+}

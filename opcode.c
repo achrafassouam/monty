@@ -14,6 +14,7 @@ void (*op_code(char *token, unsigned int line))(stack_t **, unsigned int)
 		{"pall", pall_nodes},
 		{"pint", pint_nodes},
 		{"pop", pop_nodes},
+		{"swap", swap_nodes},
 		{NULL, NULL}
 	};
 	int i;
