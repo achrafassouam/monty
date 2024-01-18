@@ -18,6 +18,7 @@ void execute(char **argv)
 	unsigned int line = 1;
 	stack_t *top = NULL;
 	int number;
+
 	fp = fopen(argv[1], "r");
 	if (fp == NULL)
 		file_open_error(argv);
