@@ -17,7 +17,6 @@ void execute(char **argv)
 	FILE *fp;
 	unsigned int line = 1;
 	stack_t *top = NULL;
-	int number;
 
 	fp = fopen(argv[1], "r");
 	if (fp == NULL)
@@ -34,7 +33,6 @@ void execute(char **argv)
 			if (token == NULL || is_number(token) == -1)
 				not_int_error(line);
 			number = atoi(token);
-			global_number = number;
 			function = op_code(cmd, line);
 			function(&top, line);
 		}
