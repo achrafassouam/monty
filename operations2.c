@@ -49,3 +49,46 @@ void nop_nodes(stack_t **top, unsigned int line_number)
 	(void)top;
 	(void)line_number;
 }
+
+/**
+ * sub_nodes - sub top elements of the stack
+ * @top: pointer to the top of the stack
+ * @line_number: number of the line
+ *
+ * Return: void
+ */
+
+void sub_nodes(stack_t **top, unsigned int line_number)
+{
+	stack_t *lineptr;
+
+	if (*top == NULL || (*top)->next == NULL)
+		sub_error(line_number);
+
+	lineptr = (*top)->next;
+	lineptr->n -= (*top)->n;
+	pop_nodes(top, line_number);
+}
+
+/**
+ * div_nodes - Divides elements of the stack
+ * @top: pointer to top element of the stack
+ * @line_number: number of line
+ *
+ * Return: void
+ */
+
+void div_nodes(stack_t **top, unsigned int line_number)
+{
+	stack_t *lineptr;
+
+	if (*top == NULL || (*top)->next == NULL)
+		div_error1(line_number);
+
+	if ((*top)->n == 0)
+		div_error2(line_number);
+
+	lineptr = (*top)->next;
+	lineptr->n = (lineptr->n) / (*top)->n;
+	pop_nodes(top, line_number);
+}
