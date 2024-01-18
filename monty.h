@@ -66,7 +66,7 @@ void pint_nodes(stack_t **top, unsigned int line_number);
 void pop_nodes(stack_t **top, unsigned int line_number);
 void swap_nodes(stack_t **top, unsigned int line_number);
 void add_nodes(stack_t **top, unsigned int line_number);
-
+void nop_nodes(stack_t **top, unsigned int line_number);
 
 /* other functions */
 int is_comment(char *token, int line_counter);

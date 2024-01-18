@@ -36,3 +36,16 @@ void add_nodes(stack_t **top, unsigned int line_number)
 
 	pop_nodes(top, line_number);
 }
+
+/**
+ * nope_nodes - doesn’t do anything
+ * @top: pointer to the top of the stack
+ * @line_number: number of the line
+ *
+ * Return: void
+ */
+void nop_nodes(stack_t **top, unsigned int line_number)
+{
+	(void)top;
+	(void)line_number;
+}
