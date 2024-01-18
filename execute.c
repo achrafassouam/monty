@@ -28,6 +28,8 @@ void execute(char **argv)
 		if (token == NULL)
 			continue;
 		strcpy(cmd, token);
+		if (is_comment(token, line) == 1)
+			continue;
 		if (strcmp(token, "push") == 0)
 		{
 			token = strtok(NULL, "\t\n ");
@@ -69,4 +71,21 @@ int is_number(char *token)
 			return (-1);
 	}
 	return (1);
+}
+
+/**
+ * is_comment - check if the string is a comment
+ * @token: pointer to string
+ * @line counter: line
+ *
+ * Return: -1 if not comment, 1 if it is
+ */
+int is_comment(char *token, int line_counter)
+{
+	if (token == NULL || token[0] == '#')
+	{
+		line_counter++;
+		return (1);
+	}
+	return (-1);
 }
