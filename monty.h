@@ -55,6 +55,8 @@ void not_int_error(unsigned int line);
 void pint_error(unsigned int line);
 void pop_error(unsigned int line);
 void swap_error(unsigned int line);
+void add_error(unsigned int line);
+
 
 /* operation functions */
 void push_nodes(stack_t **top, unsigned int line_number);
@@ -63,6 +65,8 @@ void free_nodes(stack_t *top);
 void pint_nodes(stack_t **top, unsigned int line_number);
 void pop_nodes(stack_t **top, unsigned int line_number);
 void swap_nodes(stack_t **top, unsigned int line_number);
+void add_nodes(stack_t **top, unsigned int line_number);
+
 
 /* other functions */
 int is_comment(char *token, int line_counter);
