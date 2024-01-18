@@ -24,7 +24,7 @@ void execute(char **argv)
 	while ((linecap = getline(&buffer, &buffer_size, fp)) != EOF)
 	{
 		token = strtok(buffer, "\t\n ");
-		if (token == '\0')
+		if (token == NULL)
 			continue;
 		strcpy(cmd, token);
 		if (is_comment(token, line) == 1)
