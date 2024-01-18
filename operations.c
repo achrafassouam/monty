@@ -10,6 +10,7 @@
 void push_nodes(stack_t **top, unsigned int line_number)
 {
 	stack_t *new_node;
+	int number = global_number;
 	(void)line_number;
 
 	new_node = malloc(sizeof(stack_t));
