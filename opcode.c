@@ -20,6 +20,7 @@ void (*op_code(char *token, unsigned int line))(stack_t **, unsigned int)
 		{"sub", sub_nodes},
 		{"div", div_nodes},
 		{"mul", mul_nodes},
+		{"mod", mod_nodes},
 		{NULL, NULL}
 	};
 	int i;

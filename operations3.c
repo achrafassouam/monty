@@ -17,3 +17,26 @@ void mul_nodes(stack_t **top, unsigned int line_number)
 	lineptr->n *= (*top)->n;
 	pop_nodes(top, line_number);
 }
+
+/**
+ * mod_nodes - modulo of the elements
+ * @top: poitner of the top of the list
+ * @line_number: number of the line
+ *
+ * Return: NULL
+ */
+
+void mod_nodes(stack_t **top, unsigned int line_number)
+{
+	stack_t *lineptr;
+
+	if (*top == NULL || (*top)->next ==  NULL)
+		mod_error(line_number);
+
+	if ((*top)->n == 0)
+		div_error2(line_number);
+
+	lineptr = (*top)->next;
+	lineptr->n = (lineptr->n) % (*top)->n;
+	pop_nodes(top, line_number);
+}
