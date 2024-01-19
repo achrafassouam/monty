@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * div_error - Print error if the stack contains less than two elements
+ * div_error1 - Print error if the stack contains less than two elements
  * @line: line
  * Return: void
  */

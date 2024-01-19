@@ -25,7 +25,10 @@ void execute(char **argv)
 	{
 		token = strtok(buffer, "\t\n ");
 		if (token == NULL)
+		{
+			line++;
 			continue;
+		}
 		strcpy(cmd, token);
 		if (is_comment(token, line) == 1)
 			continue;
